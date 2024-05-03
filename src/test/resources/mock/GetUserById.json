@@ -1,0 +1,19 @@
+{
+  "request": {
+    "id": 1,
+    "created": "2050-05-06T00:00:00",
+    "modified": "2050-05-06T00:00:00",
+    "lastlogin": "2050-05-06T00:00:00",
+    "token": "token1",
+    "isactive": true,
+    "phones": [
+      {
+        "id": null,
+        "number": "1",
+        "cityCode": "1",
+        "countryCode": "1",
+        "userId": 1
+      }
+    ]
+  }
+}

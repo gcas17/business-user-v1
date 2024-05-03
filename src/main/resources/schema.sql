@@ -1,0 +1,22 @@
+DROP TABLE IF EXISTS customer;
+CREATE TABLE customer(
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    lastlogin TIMESTAMP,
+    token VARCHAR(255),
+    isactive BOOLEAN
+);
+
+DROP TABLE IF EXISTS phone;
+CREATE TABLE phone(
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    number VARCHAR(255),
+    citycode VARCHAR(255),
+    countrycode VARCHAR(255),
+    user_id VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES Customer(id)
+)

@@ -1,0 +1,22 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  h2:
+    console:
+      enabled: true
+  application:
+    name: User Management Service
+  r2dbc:
+    url: r2dbc:h2:mem:///nisumdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    initialization-mode: always
+    schema: classpath:schema.sql
+    username: sa
+    password: password
+password:
+  regex: ^[0-9]{6}$
+jwt:
+  expiration: 30
+server:
+  error:
+    include-stacktrace: never
